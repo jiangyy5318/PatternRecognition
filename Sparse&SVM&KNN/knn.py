@@ -16,10 +16,11 @@ def knn(train_X,train_Y,test_X,test_Y,k,metric='euclidean'):
     succ = float((pred==test_Y).sum())/test_Y.shape[0]
     #print 'arcuracy = %f,k = %d, metric = %s'%(succ,k,metric)
     return succ
-    data=sio.loadmat('mnist.mat')
+
 
 if __name__ == "__main__":
      # read data
+    data = sio.loadmat('mnist.mat')
     train_X = data['train_X']
     train_Y = data['train_Y']
     test_X = data['test_X']
